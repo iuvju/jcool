@@ -5,11 +5,19 @@
 	<script src="popup.js"></script>
 </head>
 <style type="text/css">
-	.item {width: 500px;}
+	.item {
+		width: 700px;
+		margin-bottom: 10px;
+	}
 	.item .text{
 		width: 200px;
 		color: #111;
+		height: 24px;
+		line-height: 24px;
+		border-radius: 3px;
+		border: 1px solid rgb(182, 41, 148);
 	}
+	.item .map1, .item .map3{width: 100px;margin-right: 9px;}
 	.item span{
 		color: #817777;
 		padding: 0 5px;
@@ -47,11 +55,33 @@
 		padding-left: 20px;
 		height: 17px;
 	}
+	.status{height: 30px; margin-bottom: 10px;}
+	.status b{
+		font-size: 14px;
+		line-height: 30px;
+		display: inline-block;
+		height: 30px;
+		float: left;
+		margin-right: 10px;
+	}
+	.status span{
+		cursor: pointer;
+		width: 86px;
+		height: 30px;
+		display: inline-block;
+	}
+	.status span.on{
+		background: url(http://localhost/public/ju/f5_css/img/on.png) no-repeat right center;
+	}
+	.status span.off{
+		background: url(http://localhost/public/ju/f5_css/img/off.png) no-repeat right center;
+	}
 </style>
 
 <body>
+<div class="status"><b>飞行模式:</b><span id="Status" class="off"></span></div>
 <div id="ItemList">
-	<div class="item"><input type="checkbox" class="ck"/><input type="text" class="map1 text" placeholder="g.tbcdn.cn"/><span>Map -></span><input type="text" class="map2 text" placeholder="minint-quod3i0"/></div>
+	<div class="item"><input type="checkbox" class="ck"/><input type="text" class="map1 text" placeholder="g.tbcdn.cn"/><input type="text" class="map2 text" placeholder="/ju/dingzhi/1.0.2"/><span>Map -></span><input type="text" class="map3 text" placeholder="minint-quod3i0"/><input type="text" class="map4 text" placeholder="local path"/></div>
 </div>
 <div class="msg" id="Msg"></div>
 <div class="act" id="Save">保存</div><a href="javascript:;" class="add" id="Add">+</a>
