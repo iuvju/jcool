@@ -102,6 +102,7 @@ var setStatus = function(d){
 		}else{
 			d.className = 'off';
 		}
+		chrome.browserAction.setIcon({path: "img/16_16_" + d.className + ".png"});
 	});
 }
 var changeStatus = function(d){
@@ -111,4 +112,5 @@ var changeStatus = function(d){
 		d.className = 'off';
 	}
 	storage.set({status: d.className});
+	chrome.browserAction.setIcon({path: "img/16_16_" + d.className + ".png"});
 }

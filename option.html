@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JU F2E CSS</title>
-	<script src="popup.js"></script>
+	<script src="js/popup.js"></script>
 </head>
 <style type="text/css">
 	.item {
@@ -71,15 +71,15 @@
 		display: inline-block;
 	}
 	.status span.on{
-		background: url(http://localhost/public/ju/f5_css/img/on.png) no-repeat right center;
+		background: url(img/on.png) no-repeat right center;
 	}
 	.status span.off{
-		background: url(http://localhost/public/ju/f5_css/img/off.png) no-repeat right center;
+		background: url(img/off.png) no-repeat right center;
 	}
 </style>
 
 <body>
-<div class="status"><b>飞行模式:</b><span id="Status" class="off"></span></div>
+<div class="status"><b>开关状态：</b><span id="Status" class="off"></span></div>
 <div id="ItemList">
 	<div class="item"><input type="checkbox" class="ck"/><input type="text" class="map1 text" placeholder="g.tbcdn.cn"/><input type="text" class="map2 text" placeholder="/ju/dingzhi/1.0.2"/><span>Map -></span><input type="text" class="map3 text" placeholder="minint-quod3i0"/><input type="text" class="map4 text" placeholder="local path"/></div>
 </div>
