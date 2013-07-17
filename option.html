@@ -5,8 +5,15 @@
 	<script src="js/popup.js"></script>
 </head>
 <style type="text/css">
+	.wrap{
+		width: 760px;
+		margin: 0 auto;
+		border: 1px solid #3D9B84;
+		border-radius: 3px;
+		padding: 10px;
+	}
 	.item {
-		width: 700px;
+		width: 770;
 		margin-bottom: 10px;
 	}
 	.item .text{
@@ -17,7 +24,8 @@
 		border-radius: 3px;
 		border: 1px solid rgb(182, 41, 148);
 	}
-	.item .map1, .item .map3{width: 100px;margin-right: 9px;}
+	.item .map1{width: 150px;margin-right: 9px;}
+	.item .map3{width: 100px;margin-right: 9px;}
 	.item span{
 		color: #817777;
 		padding: 0 5px;
@@ -79,11 +87,13 @@
 </style>
 
 <body>
-<div class="status"><b>开关状态：</b><span id="Status" class="off"></span></div>
-<div id="ItemList">
-	<div class="item"><input type="checkbox" class="ck"/><input type="text" class="map1 text" placeholder="g.tbcdn.cn"/><input type="text" class="map2 text" placeholder="/ju/dingzhi/1.0.2"/><span>Map -></span><input type="text" class="map3 text" placeholder="minint-quod3i0"/><input type="text" class="map4 text" placeholder="local path"/></div>
+<div class="wrap">
+	<div class="status"><b>开关状态：</b><span id="Status" class="off"></span></div>
+	<div id="ItemList">
+		<div class="item"><input type="checkbox" class="ck"/><input type="text" class="map1 text" placeholder="g.tbcdn.cn"/><input type="text" class="map2 text" placeholder="/ju/dingzhi/1.0.2"/><span>Map -></span><input type="text" class="map3 text" placeholder="minint-quod3i0"/><input type="text" class="map4 text" placeholder="local path"/></div>
+	</div>
+	<div class="msg" id="Msg"></div>
+	<div class="act" id="Save">保存</div><a href="javascript:;" class="add" id="Add">+</a>
 </div>
-<div class="msg" id="Msg"></div>
-<div class="act" id="Save">保存</div><a href="javascript:;" class="add" id="Add">+</a>
 </body>
 </html>
