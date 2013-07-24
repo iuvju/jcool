@@ -86,7 +86,8 @@ var act = function(data){
         var href = item.href;
 		var url = new URLParser(href);
 		var host = url.getHost();
-        var new_host = checkStat(data, host);
+		var path = url.getPathname();
+        var new_host = checkStat(data, host, path);
         if(new_host){
            href = href.replace(new_host.remote_host, new_host.proxy_host);
            href = href.replace(new_host.remote_path, new_host.proxy_path);
@@ -96,10 +97,10 @@ var act = function(data){
 	});
 }
 
-var checkStat = function(data, host){
+var checkStat = function(data, host, path){
 	var res = false;
 	data.forEach(function(item){
-		if(item.ck && item.remote_host === host){
+		if(item.ck && item.remote_host === host && item.remote_path && path && path !== '/'){
 			res = item;
 			return res;
 		}
